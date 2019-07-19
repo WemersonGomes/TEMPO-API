@@ -27,7 +27,7 @@ const requestWeather = () => {
            city_name = data.city_name;
 
             $ ("#idcidade").html (data.city_name);
-            $ ("#temp").html (data.temp + "°C"); 
+            $ ("#temp").html (data.temp + "°.C"); 
             $ ("#status").html (data.description);
             $ ("#vent").html (data.wind_speedy);
             $ ("#nascer").html (data.sunrise);
