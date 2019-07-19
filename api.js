@@ -7,9 +7,6 @@ var statusMap;
 const requestWeather = () => {
     let cidade = document.getElementById("cidade").value;
   
-    if(cidade == "") {
-        cidade = "Belem"
-    }
    $.getJSON({
        url: "https://api.hgbrasil.com/weather",
        data: {
@@ -35,6 +32,12 @@ const requestWeather = () => {
             $ ("#vent").html (data.wind_speedy);
             $ ("#nascer").html (data.sunrise);
             $ ("#porsol").html (data.sunset);
+
+                var url_img = "https://assets.hgbrasil.com/weather/images/"+
+                data.img_id +".png";
+                $("#weather-img").attr("src",url_img);
+
+
            }
 
            
