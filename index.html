@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-js">
+    <head>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<meta charset="UTF-8" />
+        <title>API Tempo</title> 
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+        <script src="api.js"></script>
+	</head>
+	<body>
+		<div class="container">	
+			<header>
+                <h1> <strong>Tempo</strong><span>Informática 514-A</span></h1>	
+                <p id="idcidade"></p>
+
+                <input type="text" id="cidade" placeholder="Digite o nome da cidade" >
+                <button id="enter" onclick="requestWeather();">Pesquisar</button>
+
+            </header>
+            
+			<div class="main clearfix">  
+				<nav id="menu" class="nav">					
+					<ul>
+						<li>
+						    <a>     
+                                <label>Temperatura atual:</label>   
+                                <p id="temp"></p>
+							</a>
+						
+						</li>
+						<li>
+							<a>
+                                <label>Descrição:</label>
+                                <p id="status"></p>
+							</a>
+						</li>
+						<li>
+							<a>
+                                <label>Velocidade do vento:</label>
+                                <p id="vent"></p>
+							</a>
+                        </li>
+                        <li>
+							<a>
+                                <label>Nascer do sol:</label>
+                                <p id="nascer"></p>
+							</a>
+                        </li>
+                        <li>
+                            <a>
+                                <label>Por do sol:</label>
+                                <p id="porsol"></p>
+                            </a>
+                        </li>
+						
+					</ul>
+				</nav>
+			</div>
+        </div>
+        
+        <script>
+                var input = document.getElementById("cidade");
+                input.addEventListener("keyup", function(event) {
+                  if (event.keyCode === 13) {
+                    document.getElementById("enter").click();
+                  }
+                });
+                </script>
+
+    </body>
+</html>
